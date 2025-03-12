@@ -1,23 +1,30 @@
 package model.entities;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Department implements Serializable {
 
+    // Version Serializable
+    @Serial
     private static final long serialVersionUID = 1L;
 
+    // Attributes
     private Integer id;
     private String name;
 
+    // Constructor empty
     public Department() {
     }
 
+    // Constructor with arguments
     public Department(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
+    // Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -34,6 +41,7 @@ public class Department implements Serializable {
         this.name = name;
     }
 
+    // HashCode and Equals
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -46,6 +54,7 @@ public class Department implements Serializable {
         return Objects.hashCode(id);
     }
 
+    // ToString
     @Override
     public String toString() {
         return "Department {" + "id=" + id + ", name='" + name + '\'' + '}';
