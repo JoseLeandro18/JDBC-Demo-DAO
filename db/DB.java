@@ -8,7 +8,7 @@ import java.util.Properties;
 public class DB {
     private static Connection conn = null;
 
-    // method that open the dataBase whit DriveManager
+    // Method that open the dataBase whit DriveManager
     public static Connection getConnection() {
         if(conn == null) {
             try {
@@ -22,7 +22,7 @@ public class DB {
         return conn;
     }
 
-    // method that closes getConnection function
+    // Method that closes getConnection function
     public static void closeConnection() {
         if(conn != null) {
             try {
@@ -33,7 +33,7 @@ public class DB {
         }
     }
 
-    // method that load data from the 'db.properties' file
+    // Method that load data from the 'db.properties' file
     public static Properties loadProperties() {
         try(FileInputStream fs = new FileInputStream("db.properties")) {
             Properties props = new Properties();
@@ -44,7 +44,7 @@ public class DB {
         }
     }
 
-    // method that closes the statement function
+    // Method that closes the statement function
     public static void closeStatement(Statement stmt) {
         if(stmt != null) {
             try {
@@ -55,7 +55,7 @@ public class DB {
         }
     }
 
-    // method that closes the ResultSet function
+    // Method that closes the ResultSet function
     public static void closeResultSet(ResultSet rs) {
         if(rs != null) {
             try {
